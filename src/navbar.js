@@ -16,25 +16,25 @@ const Navbar = () => {
         <ul>
           <li className="details" to="/about">
             <li>
-            <i class="bi bi-info-circle-fill"></i> About
+            <i className="bi bi-info-circle-fill"></i> About
             </li>
           </li>
           <li className="details" to="/offer">
             <li>
-              <i className="bi bi-gift"></i> Offer
+              <i className="bi bi-gift-fill"></i> Offer
             </li>
           </li>
           <li className="details" to="/help">
             {" "}
             <li>
-              <i className="bi bi-question-circle"></i> Help
+              <i className="bi bi-question-circle-fill"></i> Help
             </li>
           </li>
           <li>
             <i className="bi bi-person-circle"></i> Sign in
           </li>
           <li>
-            <i className="bi bi-cart2"></i> Cart
+            <i className="bi bi-cart-fill"></i> Cart
           </li>
         </ul>
       </div>

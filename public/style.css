@@ -10,45 +10,44 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.box {
-  width: 240px;
-  border-radius: 15px;
-  margin: 5px;
-  cursor: pointer;
-}
-.food-img {
+.navbar {
   width: 100%;
-  height: 140px;
-  border-radius: 15px;
-  object-fit: cover;
-  cursor: pointer;
+  height: 60px;
+  padding: 5px 20px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  display: flex;
+  background: #ffffff;
+  box-shadow: 22px 22px 45px #e2dcdc, -22px -22px 45px #ffffff;
 }
-.hotel {
-  margin: 2px;
-  padding: 2px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.rating {
-  margin: 2px;
-  margin-top: -2px;
-  padding: 2px;
+.logo-name {
+  display: flex;
   align-items: center;
 }
-.room {
-  margin: 2px;
-  margin-top: -2px;
-  padding: 2px;
+.logo {
+  width: 50px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 50px;
+  cursor: pointer;
 }
-.place {
-  margin: 2px;
-  padding: 2px;
-  margin-top: -2px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.other {
+  font-weight: bolder;
+  border-bottom: 2px solid black;
 }
+.bi-chevron-down {
+  color: orange;
+  font-size: 16px;
+}
+.items > ul {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+}
+
 .bi-star-fill {
   background-color: green;
   color: white;
@@ -65,60 +64,9 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
-.navbar {
-  width: 100%;
-  height: 60px;
-  padding: 5px 20px;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  display: flex;
-  background: #ffffff;
-  box-shadow: 22px 22px 45px #e2dcdc, -22px -22px 45px #ffffff;
-}
-.body-app {
-  width: 100%;
-  height: 700px;
-}
-.card-body {
-  width: auto;
-  padding: 10px;
-  margin: 0px 100px;
-  height: 100%;
-  margin-top: 90px;
-}
-.card-flex {
-  width: auto;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0px;
-  padding: 0;
-}
-.logo-name {
-  display: flex;
-  align-items: center;
-}
-.logo {
-  width: 50px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 50px;
-  cursor: pointer;
-}
-.bi-chevron-down {
-  color: orange;
-  font-size: 16px;
-}
-.other {
-  font-weight: bolder;
-  border-bottom: 2px solid black;
-}
-.items > ul {
-  display: flex;
-  align-items: center;
-  margin-right: 50px;
+.details {
+  text-decoration: none;
+  color: black;
 }
 li {
   list-style: none;
@@ -128,10 +76,50 @@ li {
 li:hover {
   color: rgb(255, 166, 0);
 }
-.heading {
-  margin-bottom: 10px;
-  margin-top: -10px;
-  margin-left: 5px;
+.swiggy-body {
+  width: 100%;
+  height: 700px;
+  align-items: center;
+}
+
+.box {
+  width: 270px;
+  border-radius: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+.food-img {
+  width: 100%;
+  height: 170px;
+  border-radius: 15px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.hotel {
+  margin: 1px;
+  padding: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.rating {
+  margin: 1px;
+  margin-top: -2px;
+  padding: 2px;
+  align-items: center;
+}
+.room {
+  margin: 1px;
+  margin-top: -2px;
+  padding: 2px;
+}
+.place {
+  margin: 1px;
+  padding: 2px;
+  margin-top: -2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .filter-contaier {
   display: flex;
@@ -139,6 +127,7 @@ li:hover {
   box-sizing: border-box;
   align-items: center;
   width: 100%;
+  /* justify-content: center; */
 }
 .filter-btn {
   padding: 10px 17px;
@@ -149,15 +138,15 @@ li:hover {
   margin-right: 20px;
 }
 .s-card {
-  width: 240px;
+  width: 270px;
   border-radius: 15px;
-  margin: 7px;
+  margin: 10px;
   margin-top: 73px;
   background-color: rgba(185, 177, 177, 0.426);
 }
 .s-img {
   width: 100%;
-  height: 140px;
+  height: 170px;
   border-radius: 15px;
   background-color: rgba(185, 177, 177, 0.426);
 }
@@ -180,6 +169,7 @@ li:hover {
 }
 .move {
   margin-left: 7px;
+  
 }
 .s-place {
   margin: 5px;
@@ -189,6 +179,7 @@ li:hover {
   height: 10px;
   background-color: rgba(185, 177, 177, 0.426);
 }
+
 .input {
   margin-left: 350px;
   outline: none;
@@ -233,6 +224,28 @@ li:hover {
   background-color: green;
   padding: 5px;
   border-radius: 50%;
+}
+.card-body {
+  width: auto;
+  padding: 10px;
+  margin: 0px 100px;
+  height: 100%;
+  margin-top: 90px;
+  
+}
+.heading {
+  margin-bottom: 10px;
+  margin-top: -10px;
+  margin-left: 5px;
+}
+.card-flex {
+  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
 }
 .item-name {
   margin: 0px;
