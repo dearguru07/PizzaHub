@@ -1,12 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo-name">
-        <img className="logo" src={"swiggy new logo.png"}></img>
+        <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ89jlLpiNDcvESPjnChG9VfymgrvGSyUwiQ&s"></img>
         <p>
           <span className="other">Other</span> Tirupathi, Andhara Pradhesh,
           India <i className="bi bi-chevron-down"></i>

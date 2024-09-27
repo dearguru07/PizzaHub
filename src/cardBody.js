@@ -38,15 +38,15 @@ const CardFlex=()=>{
       return <Shimmer/>
     }
     else{
-      return <div className="card-flter">
-      <div className="filter-contaier">
+      return <div>
+        <div className="filter-contaier">
       <button className="filter-btn" onClick={()=>{
                 const aboveFour = resto.filter((x)=>{
-                     return x.info.avgRating == 4.4
+                     return x.info.avgRating>4
                     })
                     console.log(aboveFour)
       }}>Ratings 4.0+</button>
-      <button className="filter-btn">Rs. 300-Rs. 600</button>
+      <button className="filter-btn ">Rs. 300-Rs. 600</button>
       <button className="filter-btn">Less than Rs. 300</button>
       </div>
       <div className="card-flex">
@@ -64,12 +64,14 @@ const CardFlex=()=>{
 const CardBody = () => {
   return (
     <div className="card-body">
+      
       <h2 className="heading">Best offers for you</h2>
       <BestFlex />
       <h2 className="heading">
         Restaurants with online food delivery in Chittoor
       </h2>
       <CardFlex />
+      
     </div>
   );
 };
