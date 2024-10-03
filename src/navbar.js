@@ -6,8 +6,7 @@ const Navbar = () => {
       <div className="logo-name">
         <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ89jlLpiNDcvESPjnChG9VfymgrvGSyUwiQ&s"></img>
         <p>
-          <span className="other">Other</span> Tirupathi, Andhara Pradhesh,
-          India <i className="bi bi-chevron-down"></i>
+          <span className="other">Other</span> Tirupathi, Andhara Pradhesh,India <i className="bi bi-chevron-down"></i>
         </p>
       </div>
       <div className="items">

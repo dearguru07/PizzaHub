@@ -53,9 +53,9 @@ body {
   background-color: green;
   color: white;
   border-radius: 50%;
-  padding: 1px 2px;
+  padding: 0px 3px 2px;
+  justify-content: center;
   align-items: center;
-  /* width: 60px; */
 }
 .box-flex {
   display: flex;
@@ -83,6 +83,34 @@ li:hover {
   align-items: center;
 }
 
+.s-image {
+  width: 140px;
+  height: 150px;
+  margin: 10px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.scrol-bar::-webkit-scrollbar {
+  display: none;
+}
+.scrol-bar {
+  display: flex;
+  width: 80%;
+  height: 250px;
+  overflow-x: auto;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px auto;
+  margin-top: -50px;
+}
+
+.guru{
+  text-align: left;
+  margin-left: 180px;
+  margin-top: 120px;
+  font-weight: bolder;
+  font-size: 27px;
+}
 .box {
   width: 270px;
   border-radius: 15px;
@@ -122,20 +150,15 @@ li:hover {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-
-.s-card {
+.s-img {
   width: 270px;
   border-radius: 15px;
   margin: 10px;
+  height: 170px;
   margin-top: 73px;
   background-color: rgba(185, 177, 177, 0.426);
 }
-.s-img {
-  width: 100%;
-  height: 170px;
-  border-radius: 15px;
-  background-color: rgba(185, 177, 177, 0.426);
-}
+
 .s-name {
   margin: 5px;
   padding: 3px;
@@ -167,19 +190,23 @@ li:hover {
 }
 
 .input {
-  margin-left: 350px;
+  margin-left: 200px;
   outline: none;
   border: 1px solid black;
   border-radius: 10px;
-  width: 300px;
+  width: 350px;
   font-size: 15px;
   padding: 9px 15px;
 }
 .s-btn {
-  background-color: grey;
-  padding: 10px 20px;
-  color: white;
+  background-color: rgb(48, 219, 96);
+  padding: 8px 25px;
+  color: rgb(0, 0, 0);
   margin: 10px;
+  font-size: 16px;
+  border: 1px solid black;
+  font-weight: bolder;
+  outline: none;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -214,16 +241,11 @@ li:hover {
 .card-body {
   width: auto;
   padding: 10px;
-  margin: 0px 100px;
+  margin: 0px 70px;
   height: 100%;
-  margin-top: 90px;
-  
+  margin-top: 20px;
 }
-.heading {
-  margin-bottom: 10px;
-  margin-top: -10px;
-  margin-left: 5px;
-}
+
 .card-flex {
   width: auto;
   display: flex;
@@ -263,7 +285,11 @@ li:hover {
   background-color: tomato;
   cursor: pointer;
 }
-
+.heading {
+  margin-top: -10px;
+  text-align: left;
+  margin-left: 110px;
+}
 .b-i {
   width: 440px;
   height: 230px;
@@ -272,7 +298,9 @@ li:hover {
 .b-flex {
   display: flex;
   overflow-x: auto;
+  margin: 0px auto;
   margin-bottom: 30px;
+  width: 85%;
 }
 .b-flex::-webkit-scrollbar {
   display: none;
@@ -290,7 +318,8 @@ li:hover {
   padding: 15px;
   box-sizing: border-box;
   align-items: center;
-  width: 100%;
+  width: 85%;
+  margin-left: 90px;
 }
 .filter-btn {
   padding: 10px 17px;
