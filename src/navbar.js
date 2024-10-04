@@ -1,4 +1,6 @@
 import React from "react";
+import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -11,28 +13,11 @@ const Navbar = () => {
       </div>
       <div className="items">
         <ul>
-          <li className="details" to="/about">
-            <li>
-            <i className="bi bi-info-circle-fill"></i> About
-            </li>
-          </li>
-          <li className="details" to="/offer">
-            <li>
-              <i className="bi bi-gift-fill"></i> Offer
-            </li>
-          </li>
-          <li className="details" to="/help">
-            {" "}
-            <li>
-              <i className="bi bi-question-circle-fill"></i> Help
-            </li>
-          </li>
-          <li>
-            <i className="bi bi-person-circle"></i> Sign in
-          </li>
-          <li>
-            <i className="bi bi-cart-fill"></i> Cart
-          </li>
+          <Link className="details" to="/offers"><li><i className="bi bi-gift-fill"></i> Offers</li></Link>
+          <Link className="details" to="About"><li><i className="bi bi-info-circle-fill"></i> About</li></Link>
+          <Link className="details" to="/Help"><li><i className="bi bi-question-circle-fill"></i> Help</li></Link>
+        <li><i className="bi bi-person-circle"></i> Sign in</li>
+        <li><i className="bi bi-cart-fill"></i> Cart</li>
         </ul>
       </div>
     </div>

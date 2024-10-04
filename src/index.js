@@ -2,16 +2,49 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Navbar from "./navbar";
 import Body from "./body";
-import ScrollBar from "./scrollBar";
+import Offers from "./offers";
+import About from "./about";
+import Menu from "./menu";
+import Help from "./help";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <ScrollBar/>
-      <Body/>
+      <Outlet/>
     </div>
   );
 };
+
+const ways=createBrowserRouter([
+  {
+    path:"/",
+    element:<App/>,
+    children:[
+      {
+      path:"/",
+      element:<Body/>
+    },
+      {
+        path:"/offers",
+        element:<Offers/>
+      },
+      {
+        path:"/about",
+        element:<About/>
+      },
+      {
+        path:"/help",
+        element:<Help/>
+      },
+      {
+        path:"/restarents/id:1234",
+        element:<Menu/>
+      }
+    ]
+  },
+  
+])
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App/>);
+root.render(<RouterProvider router={ways}/>);

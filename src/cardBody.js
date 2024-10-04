@@ -22,7 +22,7 @@ const Card = (props) => {
 
 const CardFlex=()=>{
     const [resto,setresto]=useState([])
-    // const [search,setsearch]=useState([])
+    const [search,setsearch]=useState('')
     useEffect(()=>{
         async function swiggy(){
             const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0445612&lng=77.57268839999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
@@ -40,15 +40,23 @@ const CardFlex=()=>{
         <div className="filter-contaier">
       <button className="filter-btn" onClick={()=>{
         const aboveFour=resto.filter((x)=>{
-          return x.info.avgRating>4.5
+          return x.info.avgRating>=4.5
         })
         setresto(aboveFour)
       }}>Ratings 4.5+</button>
       <button className="filter-btn">Pure Veg</button>
       <button className="filter-btn">Rs. 300-Rs. 600</button>
       <div className="search-container">
-            <input className="input" type="text" placeholder="Enter what do u wan't..."></input>
-            <button className="s-btn">Search</button>
+            <input className="input" type="text" placeholder="Enter what do u wan't..." value={search} onChange={(s)=>{
+                setsearch(s.target.value)
+                console.log(search)
+            }}></input>
+            <button className="s-btn" onClick={()=>{
+             const sea= resto.filter((b)=>{
+                return b.info.cuisines.includes(search)
+              })
+              setresto(sea)
+            }}>Search</button>
       </div>
       </div>
       <div className="card-flex">
