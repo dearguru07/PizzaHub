@@ -27,8 +27,8 @@ const ways=createBrowserRouter([
       element:<Body/>
     },
       {
-        path:"/offers",
-        element:<Offers/>
+        path:"/restarents",
+        element:<Menu/>
       },
       {
         path:"/about",
@@ -39,7 +39,7 @@ const ways=createBrowserRouter([
         element:<Help/>
       },
       {
-        path:"/restarents/id:1234",
+        path:"/restarents",
         element:<Menu/>
       }
     ]

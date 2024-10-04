@@ -6,14 +6,14 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo-name">
-        <img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ89jlLpiNDcvESPjnChG9VfymgrvGSyUwiQ&s"></img>
+        <Link><img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ89jlLpiNDcvESPjnChG9VfymgrvGSyUwiQ&s"></img></Link>
         <p>
           <span className="other">Other</span> Tirupathi, Andhara Pradhesh,India <i className="bi bi-chevron-down"></i>
         </p>
       </div>
       <div className="items">
         <ul>
-          <Link className="details" to="/offers"><li><i className="bi bi-gift-fill"></i> Offers</li></Link>
+          <Link className="details" to="/restarents"><li><i className="bi bi-gift-fill"></i> Offers</li></Link>
           <Link className="details" to="About"><li><i className="bi bi-info-circle-fill"></i> About</li></Link>
           <Link className="details" to="/Help"><li><i className="bi bi-question-circle-fill"></i> Help</li></Link>
         <li><i className="bi bi-person-circle"></i> Sign in</li>

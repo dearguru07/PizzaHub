@@ -133,10 +133,13 @@ li:hover {
   text-overflow: ellipsis;
 }
 .rating {
-  margin: 1px;
-  margin-top: -2px;
-  padding: 2px;
+  margin: 2px;
+  padding: 2px 4px;
+  justify-content: center;
   align-items: center;
+}
+.gee{
+  margin: 0px;
 }
 .room {
   margin: 1px;
@@ -203,7 +206,8 @@ li:hover {
   align-items: center;
   justify-content: space-between;
   border-top: 2px solid rgb(91, 83, 83);
-  padding: 10px 5px;
+  /* padding: 10px 5px; */
+  margin: 25px 200px;
 }
 .g-box {
   margin: 0px;
@@ -235,8 +239,13 @@ li:hover {
   margin: 0px 95px;
   padding: 0;
 }
+.inner-par{
+  text-align: left;
+  justify-content: first baseline;
+}
 .item-name {
   margin: 0px;
+  display: inline;
 }
 .cost {
   margin: 0px;
@@ -250,6 +259,7 @@ li:hover {
   height: 130px;
   border-radius: 10px;
   object-fit: cover;
+  margin-top: 10px;
 }
 .absolute {
   position: absolute;
@@ -261,8 +271,10 @@ li:hover {
   border: 1px solid grey;
   border-radius: 5px;
   color: whitesmoke;
+  font-weight: bolder;
+  color: black;
   padding: 8px 39px;
-  background-color: tomato;
+  background-color: rgb(52, 219, 30);
   cursor: pointer;
 }
 .heading {
@@ -335,6 +347,17 @@ li:hover {
 
 .search-container{
   margin-left: 230px;
-
-
+}
+.next-page{
+  text-decoration: none;
+  color: black;
+}
+.a-imges{
+  width: 100%;
+  /* padding: 12px; */
+}
+.a-i{
+  width: 450px;
+  padding: 10px;
+  height: 200px;
 }

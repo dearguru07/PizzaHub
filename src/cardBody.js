@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import Shimmer from "./shimmer";
 import BestFlex from "./best";
 import { url } from "./mockData/mockData";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 const Card = (props) => {
@@ -12,7 +13,7 @@ const Card = (props) => {
     <div className="box">
       <img className="food-img" src={url + props.data.info.cloudinaryImageId} alt="food-img"></img>
       <h3 className="place"> {props.data.info.name}</h3>
-      <h4 className="rating"><span><i className="bi bi-star-fill"></i>{" "}</span>{" "}{props.data.info.avgRating}{"."} <span>{props.data.info.sla.slaString}</span></h4>
+      <h5 className="rating"><span><i className="bi bi-star-fill"></i>{" "}</span>{" "}{props.data.info.avgRating}{"."} <span>{props.data.info.sla.slaString}</span></h5>
       <p className="hotel">{props.data.info.cuisines.join(",")} </p>
       <p className="room">{props.data.info.locality}</p>
     </div>
@@ -62,7 +63,7 @@ const CardFlex=()=>{
       <div className="card-flex">
         {
           resto.map((x)=>{
-            return <Card data={x}/>
+            return <Link className="next-page" to={"/restarents"}><Card data={x}/></Link>
           })
         }
       </div>
