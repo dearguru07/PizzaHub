@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import { useState } from "react";
 import { useEffect } from "react";
 import Shimmer from "./shimmer";
@@ -33,7 +33,7 @@ const CardFlex=()=>{
         }
         swiggy()
     },[])
-    if (resto.length==0){
+    if (resto.length===0){
       return <Shimmer/>
     }
     else{

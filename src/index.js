@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Navbar from "./navbar";
 import Body from "./body";
-import Offers from "./offers";
+// import Offers from "./offers";
 import About from "./about";
 import Menu from "./menu";
 import Help from "./help";
