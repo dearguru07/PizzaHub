@@ -39,7 +39,7 @@ const CardFlex=()=>{
     else{
       return <div>
         <div className="filter-contaier">
-      <button className="filter-btn" onClick={()=>{
+        <button className="filter-btn" onClick={()=>{
         const aboveFour=resto.filter((x)=>{
           return x.info.avgRating>=4.5
         })
@@ -52,6 +52,7 @@ const CardFlex=()=>{
                 setsearch(s.target.value)
                 console.log(search)
             }}></input>
+            
             <button className="s-btn" onClick={()=>{
              const sea= resto.filter((b)=>{
                 return b.info.cuisines.includes(search)
@@ -63,7 +64,7 @@ const CardFlex=()=>{
       <div className="card-flex">
         {
           resto.map((x)=>{
-            return <Link className="next-page" to={"/restarents"}><Card data={x}/></Link>
+            return <Link className="next-page" key={x.info.id} to={"/restarents"}><Card data={x}/></Link>
           })
         }
       </div>

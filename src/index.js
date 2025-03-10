@@ -12,39 +12,38 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Outlet/>
+      <Outlet />
     </div>
   );
 };
 
-const ways=createBrowserRouter([
+const ways = createBrowserRouter([
   {
-    path:"/",
-    element:<App/>,
-    children:[
+    path: "/",
+    element: <App />,
+    children: [
       {
-      path:"/",
-      element:<Body/>
-    },
-      {
-        path:"/restarents",
-        element:<Menu/>
+        path: "/",
+        element: <Body />,
       },
       {
-        path:"/about",
-        element:<About/>
+        path: "/restarents",
+        element: <Menu />,
       },
       {
-        path:"/help",
-        element:<Help/>
+        path: "/about",
+        element: <About />,
       },
       {
-        path:"/restarents",
-        element:<Menu/>
-      }
-    ]
+        path: "/help",
+        element: <Help />,
+      },
+      {
+        path: "/restarents",
+        element: <Menu />,
+      },
+    ],
   },
-  
-])
+]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={ways}/>);
+root.render(<RouterProvider router={ways} />);
