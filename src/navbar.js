@@ -1,12 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logo-name">
-        <Link><img className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ89jlLpiNDcvESPjnChG9VfymgrvGSyUwiQ&s"></img></Link>
+        <Link><img alt="logo-img" className="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8NxOe86yzJPx1tsRMWHqE8qM8ukXGgjOQw&s"></img></Link>
         <p>
           <span className="other">Other</span> Tirupathi, Andhara Pradhesh,India <i className="bi bi-chevron-down"></i>
         </p>
