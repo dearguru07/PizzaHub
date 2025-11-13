@@ -33,6 +33,7 @@ const Card = (props) => {
 const CardFlex = () => {
   const [resto, setresto] = useState([]);
   const [search, setsearch] = useState("");
+  const [fiterRes, setFilterRes] = useState([]);
   useEffect(() => {
     async function swiggy() {
       const data = await fetch(
@@ -44,6 +45,10 @@ const CardFlex = () => {
           .restaurants
       );
       setresto(
+        OriginalData.data.cards[1].card.card.gridElements.infoWithStyle
+          .restaurants
+      );
+      setFilterRes(
         OriginalData.data.cards[1].card.card.gridElements.infoWithStyle
           .restaurants
       );
@@ -85,7 +90,7 @@ const CardFlex = () => {
               className="s-btn"
               onClick={() => {
                 const filterResto = resto.filter((b) => {
-                  return b.info.cuisines.includes(search);
+                  return b.data.info.name.toLowerCase().includes(setsearch.toLowerCase());
                 });
                 setresto(filterResto);
               }}
@@ -95,7 +100,7 @@ const CardFlex = () => {
           </div>
         </div>
         <div className="card-flex">
-          {resto.map((x) => {
+          {fiterRes.map((x) => {
             return (
               <Link className="next-page" key={x.info.id} to={"/restarents"}>
                 <Card data={x} />
